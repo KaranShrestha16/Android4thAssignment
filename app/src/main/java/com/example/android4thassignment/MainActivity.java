@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
         String name=etName.getText().toString();
         String desc=etDes.getText().toString();
         String price=etPrice.getText().toString();
-        saveImageOnly();
-//        imageName="karan";
+//        saveImageOnly();
+        imageName="1559222762965.jpg";
 
         UserAPI userAPI= Url.getInstance().create(UserAPI.class);
 
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Toast.makeText(MainActivity.this,"Sucesfully Added ",Toast.LENGTH_LONG ).show();
                 Intent intent = new Intent(MainActivity.this, DisplayItem.class);
+               startActivity(intent);
                 finish();
             }
 

@@ -50,9 +50,9 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHol
         }catch (IOException e) {
             e.printStackTrace();
         }
-        itemsViewHolder.tvName.setText(item.getItemsName());
-        itemsViewHolder.tvName.setText(item.getItemPrice());
-        itemsViewHolder.tvDec.setText(item.getItemDescriotion());
+        itemsViewHolder.tvName.setText(item.getItemName());
+        itemsViewHolder.tvPrice.setText(item.getItemPrice());
+        itemsViewHolder.tvDec.setText(item.getItemDescription());
 
 
     }

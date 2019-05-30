@@ -53,7 +53,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="30sp"
         android:hint="Password"
-        android:textColor="#FFFFFF"
         android:textSize="20sp" />
 
     <Button

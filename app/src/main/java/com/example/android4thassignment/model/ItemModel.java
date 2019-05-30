@@ -2,17 +2,17 @@ package com.example.android4thassignment.model;
 
 public class ItemModel {
     private String _id;
-    private String itemsName;
+    private String itemName;
     private String itemPrice;
     private String itemImageName;
-    private String itemDescriotion;
+    private String itemDescription;
 
-    public ItemModel(String _id, String itemsName, String itemPrice, String itemImageName, String itemDescriotion) {
+    public ItemModel(String _id, String itemName, String itemPrice, String itemImageName, String itemDescription) {
         this._id = _id;
-        this.itemsName = itemsName;
+        this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemImageName = itemImageName;
-        this.itemDescriotion = itemDescriotion;
+        this.itemDescription = itemDescription;
     }
 
     public String get_id() {
@@ -23,12 +23,12 @@ public class ItemModel {
         this._id = _id;
     }
 
-    public String getItemsName() {
-        return itemsName;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setItemsName(String itemsName) {
-        this.itemsName = itemsName;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public String getItemPrice() {
@@ -47,12 +47,12 @@ public class ItemModel {
         this.itemImageName = itemImageName;
     }
 
-    public String getItemDescriotion() {
-        return itemDescriotion;
+    public String getItemDescription() {
+        return itemDescription;
     }
 
-    public void setItemDescriotion(String itemDescriotion) {
-        this.itemDescriotion = itemDescriotion;
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
     }
-
 }
+
