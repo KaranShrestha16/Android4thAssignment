@@ -1,16 +1,19 @@
 package com.example.android4thassignment.ItemsAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.android4thassignment.R;
+import com.example.android4thassignment.ShowDetails;
 import com.example.android4thassignment.Url;
 import com.example.android4thassignment.model.ItemModel;
 
@@ -42,10 +45,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHol
     @Override
     public void onBindViewHolder(@NonNull ItemsViewHolder itemsViewHolder, int i) {
         final ItemModel item = itemsList.get(i);
-        String imgpath = Url.BASE_URL + "myImage/"+ item.getItemImageName();
+        String imgpath = Url.BASE_URL + item.getItemImageName();
         StrictMode();
         try{
             URL url = new URL(imgpath);
+            Log.d("pathgKarean",imgpath);
             itemsViewHolder.imageView.setImageBitmap(BitmapFactory.decodeStream((InputStream) url.getContent()));
         }catch (IOException e) {
             e.printStackTrace();
@@ -53,6 +57,22 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHol
         itemsViewHolder.tvName.setText(item.getItemName());
         itemsViewHolder.tvPrice.setText(item.getItemPrice());
         itemsViewHolder.tvDec.setText(item.getItemDescription());
+
+
+        itemsViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext, ShowDetails.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                intent.putExtra("image",item.getItemImageName());
+                intent.putExtra("name",item.getItemName());
+                intent.putExtra("price",item.getItemPrice());
+                intent.putExtra("description",item.getItemDescription());
+                mContext.startActivity(intent);
+
+            }
+        });
 
 
     }
