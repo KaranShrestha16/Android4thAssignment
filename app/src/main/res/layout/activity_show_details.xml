@@ -42,7 +42,7 @@
         android:layout_below="@+id/lblname"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="27dp"
-        android:text="Description" />
+        android:text="Price" />
 
     <TextView
         android:id="@+id/detailPrice"
@@ -64,7 +64,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="27dp"
         android:layout_below="@id/detailPrice"
-        android:text="Price" />
+        android:text="Description" />
 
     <TextView
         android:id="@+id/detailDescription"
